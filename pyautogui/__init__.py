@@ -242,26 +242,26 @@ except ImportError:
     screenshot = _couldNotImportPyScreeze
 
 
-try:
-    import mouseinfo
+# try:
+#     import mouseinfo
 
-    def mouseInfo():
-        """
-        Launches the MouseInfo app. This application provides mouse coordinate information which can be useful when
-        planning GUI automation tasks. This function blocks until the application is closed.
-        """
-        mouseinfo.MouseInfoWindow()
+#     def mouseInfo():
+#         """
+#         Launches the MouseInfo app. This application provides mouse coordinate information which can be useful when
+#         planning GUI automation tasks. This function blocks until the application is closed.
+#         """
+#         mouseinfo.MouseInfoWindow()
 
-except ImportError:
+# except ImportError:
 
-    def mouseInfo():
-        """
-        This function raises PyAutoGUIException. It's used for the MouseInfo function names if the MouseInfo module
-        failed to be imported.
-        """
-        raise PyAutoGUIException(
-            "PyAutoGUI was unable to import mouseinfo. Please install this module to enable the function you tried to call."
-        )
+#     def mouseInfo():
+#         """
+#         This function raises PyAutoGUIException. It's used for the MouseInfo function names if the MouseInfo module
+#         failed to be imported.
+#         """
+#         raise PyAutoGUIException(
+#             "PyAutoGUI was unable to import mouseinfo. Please install this module to enable the function you tried to call."
+#         )
 
 
 def useImageNotFoundException(value=None):
